@@ -23,9 +23,11 @@ def todo_list(employee_id):
     # Loop through the tasks and then print the titles of the completed tasks
     for task in todos:
         if task['completed']:  # Checks if the task is completed
-            print(f"\t {task['title']}")  # Print a tab and space before the title
+            print(f"\t {task['title']}")  # Print a tab and space before title
 
 
 if __name__ == "__main__":
-    # Execute the script, access the first command-line argument, and convert the ID to an integer
+    # Execute the script,
+    # Access the first command-line argument,
+    # Convert the ID to an integer
     todo_list(int(sys.argv[1]))
