@@ -33,7 +33,7 @@ def todo_list(employee_id):
         for task in todos:
             writer.writerow([
                 employee_id,
-                user['name'],
+                user['username'],
                 task['completed'],
                 task['title']
             ])
