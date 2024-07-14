@@ -27,7 +27,9 @@ def todo_list(employee_id):
     # Writing tasks to a CSV file
     with open(f"{employee_id}.csv", mode='w', newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
-        writer.writerow(["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"])
+        writer.writerow(
+            ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
+            )
         for task in todos:
             writer.writerow([
                 employee_id,
