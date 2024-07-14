@@ -4,8 +4,8 @@ the JSON format from all task from
 all employees"""
 
 
-import requests  # Imports from request module
 import json  # imports from json module
+import requests  # Imports from request module
 
 
 def employees_tasks():

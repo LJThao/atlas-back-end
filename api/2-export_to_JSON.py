@@ -4,9 +4,9 @@ data in the JSON format from all
 tasks that are owned by this employee"""
 
 
+import json  # Imports from json module
 import requests  # Imports from requests module
 import sys  # Imports from sys module
-import json  # Imports from json module
 
 
 def todo_list(employee_id):
