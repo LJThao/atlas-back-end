@@ -3,9 +3,9 @@
 CSV format"""
 
 
+import csv  # Imports from csv module
 import requests  # Imports from requests module
 import sys  # Imports from sys module
-import csv  # Imports from csv module
 
 
 def todo_list(employee_id):
