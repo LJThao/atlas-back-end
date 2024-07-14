@@ -11,11 +11,11 @@ import sys  # Importing from sys module so it can handle command-line arguments
 def todo_list(employee_id):
     """Retrieving the TODO list for an employee and returns the information"""
     # Retrieve the employee's data from the API and then converts it to JSON
-    user = requests.get(f"https://jsonplaceholder.typicode.com/users/
-                        {employee_id}").json()
+    user = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}"
+                        ).json()
     # Retrieve the TODO list data for the employee and then converts it to JSON
-    todos = requests.get(f"https://jsonplaceholder.typicode.com/
-                         todos?userId={employee_id}").json()
+    todos = requests.get(f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
+                         ).json()
 
     # Print the employee's TODO list in this format
     print(f"Employee {user['name']} is done with tasks({sum(task['completed'] for task in todos)}/{len(todos)}):")
