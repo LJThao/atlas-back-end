@@ -4,12 +4,12 @@ the JSON format from all task from
 all employees"""
 
 
-import requests # Imports from request module
-import json # imports from json module
+import requests  # Imports from request module
+import json  # imports from json module
 
 
 def employees_tasks():
-    """Retrieve and export all TODO list tasks for all employees in JSON format"""
+    """Retrieve and export all TODO tasks for all employees in JSON format"""
     # Initialize an empty dictionary to store tasks for all employees
     all_tasks = {}
 
@@ -19,7 +19,8 @@ def employees_tasks():
     # Iterate through each user and retrieve their TODO list
     for user in users:
         employee_id = user['id']
-        todos = requests.get(f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}").json()
+        todos = requests.get(f"https://jsonplaceholder.typicode.com/"
+                             f"todos?userId={employee_id}").json()
 
         # Prepare tasks for the user
         user_tasks = []
